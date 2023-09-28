@@ -1,0 +1,131 @@
+.group-1253 {
+    position: absolute;
+    bottom: -40%;
+}
+
+.ellipse-40 {
+    background: #d9d9d9;
+    border-radius: 50%;
+    width: 1px;
+    height: 82px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.ellipse-41 {
+    background: #d9d9d9;
+    border-radius: 50%;
+    width: 1px;
+    height: 82px;
+    position: relative;
+    left: 112px;
+    top: -80px;
+}
+
+.ellipse-42 {
+    background: #d9d9d9;
+    border-radius: 50%;
+    width: 1px;
+    height: 82px;
+    position: relative;
+    left: 228px;
+    top: -160px;
+}
+
+.ellipse-43 {
+    background: #d9d9d9;
+    border-radius: 50%;
+    width: 1px;
+    height: 82px;
+    position: relative;
+    left: 337px;
+    top: -240px;
+}
+
+.mon {
+    color: #ffffff;
+    text-align: left;
+    font: 600 15px/63.92px 'Inter', sans-serif;
+    position: relative;
+    left: 34px;
+    top: -330px;
+    width: 38px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+}
+
+.tue {
+    color: #ffffff;
+    text-align: left;
+    font: 600 15px/63.92px 'Inter', sans-serif;
+    position: relative;
+    left: 153px;
+    top: -350px;
+    width: 38px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+}
+
+.wed {
+    color: #ffffff;
+    text-align: left;
+    font: 600 15px/63.92px 'Inter', sans-serif;
+    position: relative;
+    left: 266px;
+    top: -370px;
+    width: 38px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+}
+
+._12-c {
+    color: #ffffff;
+    text-align: left;
+    font: 400 17px/63.92px 'Roboto Mono', sans-serif;
+    position: relative;
+    left: 35px;
+    top: -330px;
+    width: 42px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+}
+
+._12-c2 {
+    color: #fff8f8;
+    text-align: left;
+    font: 400 17px/63.92px 'Roboto Mono', sans-serif;
+    position: relative;
+    left: 147px;
+    top: -350px;
+    width: 42px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+}
+
+._12-c3 {
+    color: #ffffff;
+    text-align: left;
+    font: 400 17px/63.92px 'Roboto Mono', sans-serif;
+    position: relative;
+    left: 267px;
+    top: -370px;
+    width: 42px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+}
+body{
+    background-color: black;
+}
