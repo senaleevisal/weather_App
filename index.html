@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <title>weater</title>
 </head>
 
@@ -19,10 +19,15 @@
                 <div class="search_box_rectangle">
                     <img src="Assets/locatiion_icon.png" id="location_icon">
                 </div>
-                <input type="text" class="search_locations" placeholder="search locations">
+                <input type="text" id="search_input" class="search_locations" placeholder="search locations">
+                <select id="location_suggessions">
+                    <option value="hello">hello</option>
+                </select>
             </div>
-            <img src="Assets/search_icon.png" class="search_icon">
-            <div class="search_elipse"></div>
+            <div id="search_btn">
+                <img src="Assets/search_icon.png" class="search_icon">
+                <div class="search_elipse"></div>
+            </div>
         </div>
     </div>
     <!--                    theame change btn                 -->
@@ -35,14 +40,13 @@
 
     <div class="head-content">
         <img class="head-img" src="Assets/head_of_photo.jpg" />
-        <div class="today">
-            Sunday Morning </div>
+        <div class="today"> </div>
         <div class="short-desc">
-            It&#039;s a partly cloudy day in London with some scattered clouds and occasional sunshine. </div>
-        <div class="location"> London </div>
+        </div>
+        <div id="location" class="location"> London </div>
         <div class="time">
             <span>
-                <span class="time-span">7:30</span>
+                <span id="time" class="time-span">7:30</span>
                 <span class="time-span2">
                 </span>
                 <span class="time-span3">AM</span>
@@ -52,35 +56,42 @@
     <div class="wrapper">
         <div class=quick_weather>
             <div class="quick_weather_reqtangle"></div><span class="humidity_text">humidity</span><span
-                class="precipitation_text">Precipitation</span><span class="mph_text">mph</span><span
-                class="wind_speed_value">40</span><span class="wind_speed_text">wind speed</span>
+                class="precipitation_text">Precipitation</span><span class="mph_text">mph</span>
+            <span id="wind_speed" class="wind_speed_value"></span><span class="wind_speed_text">wind speed</span>
             <div class="quick_weather_devider01"></div>
-            <div class="quick_weather_devider02"></div><span class="temperature_text">Temperature</span><span
-                class="temperature_value">35</span><span class="humidity_value">81</span><span
-                class="precipitation_value">09</span><span class="celcious_symbol">°C</span><span
-                class="percenatage_symbol01">
+            <div class="quick_weather_devider02"></div><span class="temperature_text">Temperature</span>
+            <span id="temperature" class="temperature_value"></span><span id="humidity" class="humidity_value"></span>
+            <span id="precipitation" class="precipitation_value"></span><span
+                class="celcious_symbol"><sup>0</sup>C</span><span class="percenatage_symbol01">
                 %</span><span class="percenatage_symbol02"> %</span>
         </div>
 
         <div class=weather_detail>
-            <div class="weather_detail_rectangle"></div><span class="time01">00 AM</span><span
-                class="time02">01
-                AM</span><span class="time03">02 AM</span><span class="time04">03 AM</span><span class="time05">04
-                AM</span><span class="time06">05 AM</span><span class="time07">06 AM</span><span class="time08">07
-                AM</span><span class="time09">08 AM</span><span class="time10">09 AM</span><span class="time11">10
-                AM</span><span class="time12">11 AM</span><span class="time13">12 AM</span><span class="time14">01
-                PM</span><span class="time15">02 PM</span><span class="time16">03 PM</span><span class="time17">04
-                PM</span><span class="time18">05 PM</span><span class="time19">06 PM</span><span class="time20">07
-                PM</span><span class="time21">08 PM</span><span class="time22">09 PM</span><span class="time23">10
-                PM</span><span class="time24">11 PM</span>
-            <div class="weather_detail_devider01"></div>
-            <div class="weather_detail_devider02"></div>
-            <div class="weather_detail_devider03"></div>
-            <div class="weather_detail_devider04"></div>
-            <div class="weather_detail_devider05"></div>
-            <div class="weather_detail_devider06"></div><span class="mon_txt">MON</span><span class="tue_txt">TUE</span><span
-                class="wed_txt">WED</span><span class="thu_txt">THU</span><span class="fri_txt">FRI</span>
+            <canvas id="myChart" class="chart" style="width:100%;max-width:600px" data-weather-details></canvas>
+            <div class="weather_detail_rectangle">
+                <div class="weater_review">
+    
+                    <span class="time01">00 AM</span><span class="time02">01
+                        AM</span><span class="time03">02 AM</span><span class="time04">03 AM</span><span class="time05">04
+                        AM</span><span class="time06">05 AM</span><span class="time07">06 AM</span><span class="time08">07
+                        AM</span><span class="time09">08 AM</span><span class="time10">09 AM</span><span class="time11">10
+                        AM</span><span class="time12">11 AM</span><span class="time13">12 AM</span><span class="time14">01
+                        PM</span><span class="time15">02 PM</span><span class="time16">03 PM</span><span class="time17">04
+                        PM</span><span class="time18">05 PM</span><span class="time19">06 PM</span><span class="time20">07
+                        PM</span><span class="time21">08 PM</span><span class="time22">09 PM</span><span class="time23">10
+                        PM</span><span class="time24">11 PM</span>
+                    <div class="weather_detail_devider01"></div>
+                    <div class="weather_detail_devider02"></div>
+                    <div class="weather_detail_devider03"></div>
+                    <div class="weather_detail_devider04"></div>
+                    <div class="weather_detail_devider05"></div>
+                    <div class="weather_detail_devider06"></div><span class="mon_txt">MON</span><span
+                        class="tue_txt">TUE</span><span class="wed_txt">WED</span><span class="thu_txt">THU</span><span
+                        class="fri_txt">FRI</span>
+                </div>
+            </div>
         </div>
+
 
 
         <div class="time_selector">
@@ -97,6 +108,7 @@
         </div>
 
     </div>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

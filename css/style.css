@@ -197,13 +197,18 @@
 }
 
 html, body {
-    margin: 0; 
-    height: 100%; 
-    overflow:hidden;
 }
 
 
-
+.chart{
+	z-index: 1;
+	position: relative;
+	top: 150px;
+	height: auto;
+	width: 100%;
+	left: 50%;
+        transform: translate(-50%, -50%);
+}
 
 
 
@@ -428,8 +433,16 @@ html, body {
 	letter-spacing:-1;
 	line-height:px;
 }
-
-
+.weater_review{
+	position: relative;
+	top: 60px;
+}
+.chart{
+	position: relative;
+	top: 100px;
+	height: 200px;
+	width: 2000px;
+}
 
 
 
