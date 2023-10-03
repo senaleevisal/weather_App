@@ -9,28 +9,36 @@
 </head>
 
 <body>
-    <div class="group-1253">
-        <div class="ellipse-40">
-        </div>
-        <div class="ellipse-41">
-        </div>
-        <div class="ellipse-42">
-        </div>
-        <div class="ellipse-43">
-        </div>
-        <div class="mon">
-            MON </div>
-        <div class="tue">
-            TUE </div>
-        <div class="wed">
-            WED </div>
-        <div class="_12-c">
-            12°C </div>
-        <div class="_12-c2">
-            12°C </div>
-        <div class="_12-c3">
-            12°C </div>
+    <div class="shading_effect">
+        <div class="location_label" id="location">London</div>
+        <img src="" class="weather_img">
     </div>
+    <div class="search_box">
+        <div class="search_box_content">
+            <div class="search_box_rectangle">
+                <img src="Assets/locatiion_icon.png" id="location_icon">
+            </div>
+            <input type="text" id="search_input" class="search_locations" placeholder="search locations">
+        </div>
+        <div id="search_btn">
+            <img src="Assets/search_icon.png" class="search_icon">
+            <div class="search_elipse"></div>
+        </div>
+    </div>
+    
+
+    <div class="weather-card">
+    
+        <div class="card-content">
+            <div class="card-info">
+                <span id="temperature"></span>°C
+                <p>Wind Speed: <span id="wind_speed"></span> km/h</p>
+                <p>Humidity: <span id="humidity"></span>%</p>
+                <p>Time: <span id="time"></span></p>
+            </div>
+        </div>
+    </div>
+    <script src="js/mobile.js"></script>
 </body>
 
 </html>
